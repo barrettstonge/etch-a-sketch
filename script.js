@@ -1,7 +1,8 @@
 
-
 const body = document.body;
 
-const container = document.createElement("div");
-container.id = "container";
-body.appendChild(container);
+const container = document.getElementById("container");
+
+const firstBox = document.createElement("div");
+firstBox.id = "first";
+container.appendChild(firstBox); 
