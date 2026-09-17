@@ -9,6 +9,12 @@ function createGrid() {
   for (let i = 0; i < totalSquares; i++) {
     const square = document.createElement("div");
     square.classList.add("grid-square");
+    square.addEventListener("mouseenter", () => {
+      square.style.backgroundColor = "#333";
+    });
+    square.addEventListener("mouseleave", ()=> {
+        square.style.backgroundColor = "blue";
+    });
       container.appendChild(square);
   }
 }
