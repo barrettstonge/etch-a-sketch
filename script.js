@@ -3,6 +3,14 @@ const body = document.body;
 
 const container = document.getElementById("container");
 
-const firstBox = document.createElement("div");
-firstBox.id = "first";
-container.appendChild(firstBox); 
+function createGrid() {
+  const totalSquares = 16 * 16; // 256
+
+  for (let i = 0; i < totalSquares; i++) {
+    const square = document.createElement("div");
+    square.classList.add("grid-square");
+      container.appendChild(square);
+  }
+}
+createGrid();
+
