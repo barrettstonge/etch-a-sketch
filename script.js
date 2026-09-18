@@ -1,10 +1,16 @@
 
 const body = document.body;
 
+const button = document.createElement("button");
+button.innerHTML = "HIT ME!";
+button.classList.add("button");
+body.appendChild(button);
+
+
 const container = document.getElementById("container");
 
 function createGrid() {
-  const totalSquares = 16 * 16; // 256
+  const totalSquares = 16 * 16; 
 
   for (let i = 0; i < totalSquares; i++) {
     const square = document.createElement("div");
@@ -13,10 +19,12 @@ function createGrid() {
       square.style.backgroundColor = "#333";
     });
     square.addEventListener("mouseleave", ()=> {
-        square.style.backgroundColor = "blue";
+        square.style.backgroundColor = "orange";
     });
       container.appendChild(square);
   }
 }
 createGrid();
+
+
 
