@@ -6,20 +6,42 @@ button.innerHTML = "HIT ME!";
 button.classList.add("button");
 body.appendChild(button);
 
-const textInput = document.createElement("input");
+/*const textInput = document.createElement("input");
 textInput.id = "myTextInput";
 textInput.type = "text";
 textInput.placeholder = "1-100";
 textInput.value = "";
 textInput.max = "100";
 textInput.min = "1";
-body.appendChild(textInput);
+body.appendChild(textInput);*/
 
 button.addEventListener("click",()=>{
-    window.alert("Input a number (1-100) and the board with adjust how many blocks you have to sketch with.");
+   let inputValue = window.prompt("Input a number (1-100) and the board with adjust how many blocks you have to sketch with.");
+        if(inputValue<=100 && inputValue >=1){ 
+             container.innerHTML = '';
+             window.alert("You entered, " + inputValue);
+             createGrid(inputValue);
+            
+        
+
+
+ }
+ else {inputValue = window.prompt("That number is outside of the stated parameters, please input a number between 1 and 100.");     
+    if(inputValue<=100 && inputValue >=1){ 
+             container.innerHTML = '';
+             window.alert("You entered, " + inputValue);
+             createGrid(inputValue);
+            
+        
+
+
+ }
+
+}
+
 });
 
-const enter = document.createElement("button");
+/*const enter = document.createElement("button");
 enter.innerHTML = "ENTER";
 enter.classList.add("enter");
 body.appendChild(enter);
@@ -40,14 +62,14 @@ enter.addEventListener("click", ()=>{
 
 
  }
- else {window.alert("That number is outside of the stated paramters, please inout a number between 1 and 100.");}
+ else {window.prompt("That number is outside of the stated paramters, please input a number between 1 and 100.");}
 
  
    
-});
+});*/
   
-let inputField = document.getElementById("myTextInput");
-let inputValue = inputField.value;
+/*let inputField = document.getElementById("myTextInput");
+let inputValue = inputField.value;*/
 
 const container = document.getElementById("container");
 
