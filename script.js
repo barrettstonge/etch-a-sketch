@@ -9,7 +9,7 @@ body.appendChild(button);
 const textInput = document.createElement("input");
 textInput.id = "myTextInput";
 textInput.type = "text";
-//textInput.placeholder = "1-100";
+textInput.placeholder = "1-100";
 textInput.value = "";
 textInput.max = "100";
 textInput.min = "1";
@@ -39,7 +39,8 @@ enter.addEventListener("click", ()=>{
         
 
 
- };
+ }
+ else {window.alert("That number is outside of the stated paramters, please inout a number between 1 and 100.");}
 
  
    
@@ -59,18 +60,25 @@ percentage = 100/inputValue;
     const square = document.createElement("div");
     square.style.width = `${percentage}%`;
       square.style.height = `${percentage}%`;
+      function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
     square.classList.add("grid-square");
     square.addEventListener("mouseenter", () => {
-      square.style.backgroundColor = "teal";
+      square.style.backgroundColor = "black";
     });
     square.addEventListener("mouseleave", ()=> {
-        square.style.backgroundColor = "pink";
+        square.style.backgroundColor = getRandomColor();
     });
       container.appendChild(square);
   };
 };
 createGrid(16);
-
 
 
 
