@@ -69,7 +69,7 @@ percentage = 100/inputValue;
       container.appendChild(square);
   };
 };
-createGrid(12);
+createGrid(16);
 
 
 
