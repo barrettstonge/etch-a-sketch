@@ -16,7 +16,7 @@ textInput.min = "1";
 body.appendChild(textInput);*/
 
 button.addEventListener("click",()=>{
-   let inputValue = window.prompt("Input a number (1-100) and the board with adjust how many blocks you have to sketch with.");
+   let inputValue = window.prompt("Let's make a new grid! Input a number (1-100) and the board will adjust how many blocks per side you have to sketch with. (The board is set up to increase the opactiy of each square by 10% each interaction until solid color is reached.");
         if(inputValue<=100 && inputValue >=1){ 
              container.innerHTML = '';
              window.alert("You entered, " + inputValue);
