@@ -91,11 +91,15 @@ percentage = 100/inputValue;
   return color;
 };
     square.classList.add("grid-square");
-    square.addEventListener("mouseenter", () => {
+    /*square.addEventListener("mouseenter", () => {
       square.style.backgroundColor = "black";
-    });
+    });*/
     square.addEventListener("mouseleave", ()=> {
-        square.style.backgroundColor = getRandomColor();
+        let currentOpacity = parseFloat(window.getComputedStyle(square).opacity);
+        if (currentOpacity < 1.0) {
+             square.style.opacity = Math.min(currentOpacity + 0.1, 1.0);
+            
+        square.style.backgroundColor = getRandomColor();}
     });
       container.appendChild(square);
   };
